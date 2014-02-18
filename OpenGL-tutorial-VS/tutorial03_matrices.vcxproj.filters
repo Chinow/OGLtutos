@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\formation\OGLtutos\OpenGL-tutorial\tutorial03_matrices\tutorial03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\formation\OGLtutos\OpenGL-tutorial\common\shader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\formation\OGLtutos\OpenGL-tutorial\common\shader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\formation\OGLtutos\OpenGL-tutorial\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\formation\OGLtutos\OpenGL-tutorial\tutorial03_matrices\SimpleTransform.vertexshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="D:\formation\OGLtutos\OpenGL-tutorial\tutorial03_matrices\SingleColor.fragmentshader">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{573AF7CE-A00A-451A-A968-DA66C686056C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{1239F957-4D56-4CDE-B97F-A0F1CEAB17CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{56026CA3-8EE2-4048-975A-1B6217EF8518}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
