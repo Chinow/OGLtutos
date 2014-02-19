@@ -11,6 +11,7 @@ GLFWwindow* window;
 
 // Include GLM
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 using namespace glm;
 
 #include <common/shader.hpp>
@@ -75,9 +76,29 @@ int main( void )
 	float theY = 1.0f;
 	float theX = 0.0f;
 	GLuint programID = LoadShaders("vertexShader.glsl", "fragmentShader.glsl");
+
+	// Proj matrix
+	mat4 Projection = perspective(45.0f, 4.0f/3.0f, 0.1f, 100.0f);
+
+	// view Matrix
+	mat4 View = lookAt(
+		vec3(4,3,3),
+		vec3(0,0,0),
+		vec3(0,1,0)
+		);
+	// model matrix
+	mat4 Model = mat4(1.0f);
+	mat4 MVP = Projection * View * Model;
+
+
+
 	do{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glUseProgram(programID);
+
+		GLuint MatrixID = glGetUniformLocation(programID, "MVP");
+
+		glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
 
 		// 1rst attribute buffer : vertices
 		glEnableVertexAttribArray(0);
